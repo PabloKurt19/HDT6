@@ -3,7 +3,7 @@
  */
 
 /**
- * @author usuario
+ * @author Pablo Ortiz, Pedro Garcia 
  *
  */
 public class main {
