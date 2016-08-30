@@ -7,7 +7,7 @@
 
 public class Desarrolladores {
 	
-	    Set JavaDev, CelularesDev, WebDev, UniversalDev, interseccion;
+	    Set JavaDev, WebDev, CelularesDev, UniversalDev, interseccion;
 	    
 	    public void ISet(int inSet){
 	        Factory<String> factory=new Factory<String>();
@@ -19,8 +19,8 @@ public class Desarrolladores {
 	        
 	    }
 	    
-	    public void ingresarPersona(String nombre, int especialidad){
-		switch( especialidad){
+	    public void IngresarDev(String nombre, int tipoDev){
+		switch( tipoDev){
 			case 1:
 				JavaDev.add(nombre);
 	                        break;
@@ -43,27 +43,27 @@ public class Desarrolladores {
 
 	}
 	    
-	    public void interseccion(boolean java, boolean web, boolean cel){
-		if(java && web && cel){
+	    public void intersecciones(boolean JavaD, boolean WebD, boolean CelularesD){
+		if(JavaD && WebD && CelularesD){
 	        interseccion=JavaDev;
 			interseccion.retainAll(WebDev);
 			interseccion.retainAll(CelularesDev);
-			System.out.println("Las personas que trabajan en las tres áreas son: \n");
+			System.out.println("Los desarrolladores de los tres conjuntos son: \n");
 			imprimir(interseccion);
-		}else if(java && web){
+		}else if(JavaD && WebD){
 			interseccion=JavaDev;
-	                interseccion.retainAll(WebDev);
-			System.out.println("Las personas que trabajan en Java y Web son: \n");
+	        interseccion.retainAll(WebDev);
+			System.out.println("Los desarrolladores de Java y Web son: \n");
 			imprimir(interseccion);
-		}else if(java && cel){
+		}else if(JavaD && CelularesD){
 			interseccion=JavaDev;
-	                interseccion.retainAll(CelularesDev);
-			System.out.println("Las personas que trabajan en Java y Celulares son: \n");
+	        interseccion.retainAll(CelularesDev);
+			System.out.println("Los desarrolladores de Java y Celulares son: \n");
 			imprimir(interseccion);
-		}else if(web && cel){
+		}else if(WebD && CelularesD){
 			interseccion=WebDev;
-	                interseccion.retainAll(CelularesDev);
-			System.out.println("Las personas que trabajan en Celulares y Web son: \n");
+	        interseccion.retainAll(CelularesDev);
+			System.out.println("Los desarrolladores de Celulares y Web son: \n");
 			imprimir(interseccion);
 		}
 		
@@ -81,12 +81,12 @@ public class Desarrolladores {
 			System.out.println("El conjunto de desarrolladores Java SI es subconjunto de desarrolladores Web");
 	        }
 	        else{
-	                System.out.println("El conjunto de  desarrolladores Java No es subconjunto de desarrolladores Web");
+	        System.out.println("El conjunto de desarrolladores Java No es subconjunto de desarrolladores Web");
 	        }
 		
 	    }
 	    
-	    public void masGrande(){
+	    public void ConjuntoMasGrande(){
 		int tamanio1;
 		int tamanio2;
 	        int tamanio3;
